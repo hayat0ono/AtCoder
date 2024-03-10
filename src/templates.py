@@ -22,7 +22,7 @@ li = list(map(int,input().split()))
 li = input().split('T')
 '''
 
-# binary search
+# binary search 1
 '''
 import bisect
 
@@ -37,6 +37,26 @@ bisect.insort_left(a, x)
 # a = [1,3,4,5,7,9,11,13,15,17,19] 左側に挿入
 bisect.insort_right(a,x)
 # a = [1,3,4,5,7,9,11,13,15,17,19] 右側に挿入
+'''
+
+# binary search 2
+'''
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        mid_val = arr[mid]
+
+        if mid_val == target:
+            return True
+        elif mid_val < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return False
 '''
 
 # Segment Tree
