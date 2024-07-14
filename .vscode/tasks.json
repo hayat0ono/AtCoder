@@ -1,28 +1,10 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "download problem",
+            "label": "make directory",
             "type": "shell",
-            "command": "${workspaceFolder}\\.scripts\\download_problem.bat ${input:problemNo}",
-            "problemMatcher": []
-        },
-        {
-            "label": "test",
-            "type": "shell",
-            "command": "cd ${workspaceFolder}\\${relativeFileDirname} ; oj test -c 'python ${file}' -t 2",
-        },
-        {
-            "label": "submit (Python (PyPy 3.10-v7.3.12))",
-            "type": "shell",
-            "command": "cd ${workspaceFolder}\\${relativeFileDirname} ; oj submit ${fileBasename} -l 5078"
-        },
-        {
-            "label": "test and submit",
-            "type": "shell",
-            "command": "${workspaceFolder}\\.scripts\\test_and_submit.bat ${workspaceFolder}\\${relativeFileDirname} ${file}",
+            "command": "${workspaceFolder}\\.scripts\\make_dir.bat ${input:problemNo}",
             "problemMatcher": []
         }
     ],
